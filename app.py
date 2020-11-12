@@ -6,11 +6,11 @@ socketio = SocketIO(app)
 
 @app.route('/')
 def chat():
-    #return render_template('chat.html')
-    return "<h1>Wassup with you</h1>"
-@socketio.on('connect')
-def new_connection():
-    emit('after connection', {'data':'it works'})
+    return render_template('chat.html')
+    #return "<h1>Wassup with you</h1>"
+@socketio.on('my event')
+def handle_my_custom_event(json):
+    print('received json: ' + str(json))
 
 if __name__ =="__main__":
     socketio.run(app,debug=True)
