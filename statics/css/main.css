@@ -1,0 +1,40 @@
+html {
+	scroll-behavior: smooth;
+}
+
+:root {
+	--very-dark-blue: #0a2a66;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+
+
+
+form {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+form input[name = "message-box"] {
+	display: inline-flex;
+	width: 90%;
+	height: 3em;
+	padding: 0 2%;
+}
+
+form input[name = "send-button"] {
+	height: 3em;
+	width: 9.5%;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	background-color: var(--very-dark-blue);
+	cursor: pointer;
+}
